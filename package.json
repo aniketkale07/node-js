@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/aniketkale07/node-js/issues"
   },
-  "homepage": "https://github.com/aniketkale07/node-js#readme"
+  "homepage": "https://github.com/aniketkale07/node-js#readme",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "nodemon": "^3.1.10"
+  }
 }
