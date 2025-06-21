@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form  id="shorten-form" method="get">
+            <div><label for="url"> Url</label>
+            <input type="text" name="url" id="url">
+        </div>
+            <div>
+                <label for="shortcode">
+                url shortcode
+            </label>
+        <input type="text" id="shortcode" name="shortcode "></div>
+        <button type="submit">submit</button>
+        </form>
+    </div>
+    <div>
+        <h2>shortend urls :</h2>
+        <ul id="shorted-urls"></ul>
+    </div>
+
+    <script>
+    // Get references to form and input fields
+    const form = document.getElementById('shorten-form');
+   
+    form.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent the default form submission
+       const formData = new FormData(event.target);
+         const url=formData.get('url');
+         const shortcode=formData.get('shortcode');
+         console.log(formData.get('url'));
+            console.log(formData.get('shortcode'));
+    });
+        
+       
+    </script>
+</body>
+</html>

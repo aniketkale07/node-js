@@ -18,6 +18,8 @@
   "homepage": "https://github.com/aniketkale07/node-js#readme",
   "dependencies": {
     "chalk": "^5.4.1",
+    "mongodb": "^6.17.0",
+    "mongoose": "^8.16.0",
     "nodemon": "^3.1.10"
   }
 }
