@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home - Auth System</title>
+   <link rel="stylesheet" href="/style/home.css" />
+</head>
+<body>
+  <div class="container">
+   
+      <p>You have successfully logged in.</p>
+    <h1>Welcome to the Auth System 🔐<%= user.firstname%> <%= user.lastname%> </h1>
+    
+    </div>
+    <div class="actions">
+
+      <a href="/logout" class="btn" onclick="logout">logout</a>
+      <a href="/login" class="btn">Login Again</a>
+      <a href="/signup" class="btn">Register New User</a>
+    </div>
+  </div>
+</body>
+</html>

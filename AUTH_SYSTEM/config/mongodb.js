@@ -1,14 +1,14 @@
-import {MongoClient} from "mongodb";
+import mongoose from "mongoose";
+import {MONGODB_URL} from './env.js';
+ 
+const connectDB = async () => {
+  mongoose
+    .connect(MONGODB_URL, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    })
+    .then(() => console.log("✅ MongoDB Connected"))
+    .catch((err) => console.error("❌ DB Error:", err));
+};
 
-const client = new MongoClient("mongodb://localhost:27017/auth");
-try{
-    await client.connect();
-    console.log("MongoDB connected successfully");
-}catch(err){
-    console.error("MongoDB connection error : ",err);
-    process.exit(1);
-}
-
-const db = client.db('login');
-const collection = db.collection("user");
-
+export {connectDB};
